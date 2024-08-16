@@ -53,11 +53,13 @@ curl http://127.0.0.1:9180/apisix/admin/consumers \
     "username": "jack",
     "plugins": {
         "key-auth": {
-            "key": "$secret://casdoor/1/jack/properties/auth-key"
+            "key": "$secret://casdoor/1/e9e80827-1c50-49c4-87ca-023c0e3f08a6/properties/auth-key"
         }
     }
 }'
 ```
+
+NOTE: `e9e80827-1c50-49c4-87ca-023c0e3f08a6` is the userId in Casdoor.
 
 NOTE: You can use other exists fields of the Casdoor User. like `owner` | `name` | `password` etc. Insteadof the `properties/auth-key`. **But please remember, Casdoor does not encrypt the field.**
 
